@@ -1,0 +1,1176 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Raaffby Enterprise — Wholesale Supplier Accra, Ghana</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Playfair+Display:wght@400;600&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            :root {
+                --color-primary: #0d1f2d;
+                --color-secondary: #1a3347;
+                --color-accent: #c9963a;
+                --color-cream: #f9f5ef;
+                --color-white: #ffffff;
+                --color-muted: #5a6a7a;
+                --color-blue-tint: #e8f4fb;
+                --color-red-tint: #fce8e8;
+                --color-amber-tint: #fef6e4;
+                --color-green-tint: #eef6e8;
+                --font-heading: "Playfair Display", Georgia, serif;
+                --font-body:
+                    "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+                --transition: 0.2s ease;
+            }
+
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+            body {
+                font-family: var(--font-body);
+                font-weight: 400;
+                line-height: 1.6;
+                color: var(--color-primary);
+                background-color: var(--color-white);
+            }
+
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+
+            img {
+                max-width: 100%;
+                display: block;
+            }
+
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 24px;
+            }
+
+            /* Navigation */
+            .nav {
+                position: sticky;
+                top: 0;
+                z-index: 100;
+                background-color: var(--color-primary);
+                padding: 16px 0;
+            }
+
+            .nav .container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .nav-logo {
+                font-family: var(--font-heading);
+                font-size: 22px;
+                font-weight: 600;
+                color: var(--color-white);
+                letter-spacing: -0.5px;
+            }
+
+            .nav-logo span {
+                color: var(--color-accent);
+            }
+
+            .nav-links {
+                display: flex;
+                align-items: center;
+                gap: 32px;
+                list-style: none;
+            }
+
+            .nav-links a {
+                font-size: 15px;
+                font-weight: 500;
+                color: var(--color-white);
+                transition: color var(--transition);
+            }
+
+            .nav-links a:hover {
+                color: var(--color-accent);
+            }
+
+            .nav-cta {
+                background-color: var(--color-accent);
+                color: var(--color-primary) !important;
+                padding: 10px 20px;
+                border-radius: 4px;
+                font-weight: 500;
+                transition: background-color var(--transition);
+            }
+
+            .nav-cta:hover {
+                background-color: #d9a94a;
+            }
+
+            /* Hero Section */
+            .hero {
+                background-color: var(--color-primary);
+                padding: 80px 0 100px;
+            }
+
+            .hero .container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 60px;
+                align-items: center;
+            }
+
+            .hero-tag {
+                display: inline-block;
+                background-color: rgba(201, 150, 58, 0.15);
+                color: var(--color-accent);
+                font-size: 12px;
+                font-weight: 500;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                padding: 8px 16px;
+                border-radius: 20px;
+                margin-bottom: 24px;
+            }
+
+            .hero h1 {
+                font-family: var(--font-heading);
+                font-size: 48px;
+                font-weight: 600;
+                color: var(--color-white);
+                line-height: 1.15;
+                margin-bottom: 20px;
+            }
+
+            .hero h1 .accent {
+                color: var(--color-accent);
+            }
+
+            .hero p {
+                font-size: 17px;
+                font-weight: 300;
+                color: rgba(255, 255, 255, 0.75);
+                max-width: 440px;
+                margin-bottom: 32px;
+            }
+
+            .hero-buttons {
+                display: flex;
+                gap: 16px;
+            }
+
+            .btn-primary {
+                display: inline-block;
+                background-color: var(--color-accent);
+                color: var(--color-primary);
+                font-weight: 500;
+                padding: 14px 28px;
+                border-radius: 4px;
+                transition: background-color var(--transition);
+            }
+
+            .btn-primary:hover {
+                background-color: #d9a94a;
+            }
+
+            .btn-secondary {
+                display: inline-block;
+                border: 1px solid rgba(255, 255, 255, 0.4);
+                color: var(--color-white);
+                font-weight: 500;
+                padding: 14px 28px;
+                border-radius: 4px;
+                transition:
+                    border-color var(--transition),
+                    background-color var(--transition);
+            }
+
+            .btn-secondary:hover {
+                border-color: var(--color-white);
+                background-color: rgba(255, 255, 255, 0.05);
+            }
+
+            .hero-visual {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+
+            .hero-card {
+                background-color: var(--color-secondary);
+                border-radius: 8px;
+                padding: 20px;
+                min-height: 100px;
+            }
+
+            .hero-card:first-child {
+                grid-column: 1 / -1;
+            }
+
+            .hero-card-icon {
+                font-size: 28px;
+                margin-bottom: 8px;
+            }
+
+            .hero-card-label {
+                font-size: 13px;
+                font-weight: 500;
+                color: var(--color-white);
+                opacity: 0.9;
+            }
+
+            /* Trust Bar */
+            .trust-bar {
+                background-color: var(--color-cream);
+                padding: 40px 0;
+            }
+
+            .trust-bar .container {
+                display: flex;
+                justify-content: center;
+                gap: 60px;
+                flex-wrap: wrap;
+            }
+
+            .trust-item {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                font-size: 15px;
+                color: var(--color-muted);
+            }
+
+            .trust-dot {
+                width: 8px;
+                height: 8px;
+                background-color: var(--color-accent);
+                border-radius: 50%;
+            }
+
+            /* Products Section */
+            .products {
+                padding: 80px 0;
+                background-color: var(--color-white);
+            }
+
+            .section-label {
+                display: block;
+                font-size: 12px;
+                font-weight: 500;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                color: var(--color-accent);
+                margin-bottom: 12px;
+            }
+
+            .products h2 {
+                font-family: var(--font-heading);
+                font-size: 36px;
+                font-weight: 600;
+                color: var(--color-primary);
+                margin-bottom: 40px;
+            }
+
+            .products-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+                gap: 24px;
+            }
+
+            .product-card {
+                border-radius: 8px;
+                overflow: hidden;
+                transition:
+                    transform var(--transition),
+                    box-shadow var(--transition);
+                background-color: var(--color-white);
+                border: 1px solid #eee;
+            }
+
+            .product-card:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 8px 24px rgba(13, 31, 45, 0.08);
+            }
+
+            .product-thumb {
+                height: 160px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 48px;
+            }
+
+            .product-thumb.water {
+                background-color: var(--color-blue-tint);
+            }
+            .product-thumb.drinks {
+                background-color: var(--color-red-tint);
+            }
+            .product-thumb.chips {
+                background-color: var(--color-amber-tint);
+            }
+            .product-thumb.groundnuts {
+                background-color: var(--color-green-tint);
+            }
+
+            .product-info {
+                padding: 20px;
+            }
+
+            .product-name {
+                font-family: var(--font-heading);
+                font-size: 20px;
+                font-weight: 600;
+                color: var(--color-primary);
+                margin-bottom: 8px;
+            }
+
+            .product-desc {
+                font-size: 14px;
+                color: var(--color-muted);
+                margin-bottom: 12px;
+            }
+
+            .product-badge {
+                display: inline-block;
+                font-size: 11px;
+                font-weight: 500;
+                letter-spacing: 0.5px;
+                text-transform: uppercase;
+                padding: 6px 12px;
+                background-color: var(--color-cream);
+                color: var(--color-secondary);
+                border-radius: 4px;
+            }
+
+            /* How It Works Section */
+            .how-it-works {
+                background-color: var(--color-cream);
+                padding: 80px 0;
+            }
+
+            .how-it-works h2 {
+                font-family: var(--font-heading);
+                font-size: 36px;
+                font-weight: 600;
+                color: var(--color-primary);
+                margin-bottom: 48px;
+            }
+
+            .steps {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 40px;
+            }
+
+            .step {
+                position: relative;
+                padding-top: 20px;
+            }
+
+            .step-number {
+                font-family: var(--font-heading);
+                font-size: 72px;
+                font-weight: 600;
+                color: var(--color-accent);
+                opacity: 0.25;
+                position: absolute;
+                top: -20px;
+                left: 0;
+                line-height: 1;
+            }
+
+            .step h3 {
+                font-family: var(--font-heading);
+                font-size: 22px;
+                font-weight: 600;
+                color: var(--color-primary);
+                margin-bottom: 12px;
+            }
+
+            .step p {
+                font-size: 15px;
+                font-weight: 300;
+                color: var(--color-muted);
+            }
+
+            /* Why Us Section */
+            .why-us {
+                background-color: var(--color-primary);
+                padding: 80px 0;
+            }
+
+            .why-us .section-label {
+                color: rgba(255, 255, 255, 0.6);
+            }
+
+            .why-us h2 {
+                font-family: var(--font-heading);
+                font-size: 36px;
+                font-weight: 600;
+                color: var(--color-white);
+                margin-bottom: 16px;
+            }
+
+            .why-us > .container > p {
+                font-size: 16px;
+                font-weight: 300;
+                color: rgba(255, 255, 255, 0.6);
+                max-width: 600px;
+                margin-bottom: 48px;
+            }
+
+            .why-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+                gap: 24px;
+            }
+
+            .why-card {
+                background-color: var(--color-secondary);
+                border: 1px solid rgba(255, 255, 255, 0.08);
+                border-radius: 8px;
+                padding: 28px;
+            }
+
+            .why-icon {
+                font-size: 32px;
+                margin-bottom: 16px;
+            }
+
+            .why-card h3 {
+                font-family: var(--font-heading);
+                font-size: 18px;
+                font-weight: 600;
+                color: var(--color-white);
+                margin-bottom: 8px;
+            }
+
+            .why-card p {
+                font-size: 14px;
+                font-weight: 300;
+                color: rgba(255, 255, 255, 0.6);
+            }
+
+            /* Order Section */
+            .order-section {
+                padding: 80px 0;
+                background-color: var(--color-white);
+            }
+
+            .order-section h2 {
+                font-family: var(--font-heading);
+                font-size: 36px;
+                font-weight: 600;
+                color: var(--color-primary);
+                margin-bottom: 16px;
+            }
+
+            .order-section > .container > p {
+                font-size: 16px;
+                font-weight: 300;
+                color: var(--color-muted);
+                margin-bottom: 48px;
+                max-width: 500px;
+            }
+
+            .order-grid {
+                display: grid;
+                grid-template-columns: 1fr 1.2fr;
+                gap: 60px;
+            }
+
+            .contact-info h3 {
+                font-family: var(--font-heading);
+                font-size: 24px;
+                font-weight: 600;
+                color: var(--color-primary);
+                margin-bottom: 16px;
+            }
+
+            .contact-info > p {
+                font-size: 15px;
+                color: var(--color-muted);
+                margin-bottom: 32px;
+            }
+
+            .contact-details {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .contact-item {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+            }
+
+            .contact-icon {
+                width: 40px;
+                height: 40px;
+                background-color: var(--color-cream);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 16px;
+                flex-shrink: 0;
+            }
+
+            .contact-text {
+                font-size: 15px;
+                color: var(--color-primary);
+            }
+
+            .order-form {
+                background-color: var(--color-cream);
+                padding: 32px;
+                border-radius: 8px;
+            }
+
+            .form-row {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 16px;
+                margin-bottom: 16px;
+            }
+
+            .form-group {
+                margin-bottom: 16px;
+            }
+
+            .form-group label {
+                display: block;
+                font-size: 13px;
+                font-weight: 500;
+                color: var(--color-secondary);
+                margin-bottom: 8px;
+            }
+
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                width: 100%;
+                padding: 14px 16px;
+                font-family: var(--font-body);
+                font-size: 15px;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                background-color: var(--color-white);
+                color: var(--color-primary);
+                transition: border-color var(--transition);
+            }
+
+            .form-group input:focus,
+            .form-group select:focus,
+            .form-group textarea:focus {
+                outline: none;
+                border-color: var(--color-accent);
+            }
+
+            .form-group textarea {
+                min-height: 120px;
+                resize: vertical;
+            }
+
+            .form-submit {
+                width: 100%;
+                background-color: var(--color-primary);
+                color: var(--color-white);
+                font-family: var(--font-body);
+                font-size: 15px;
+                font-weight: 500;
+                padding: 16px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: background-color var(--transition);
+            }
+
+            .form-submit:hover {
+                background-color: var(--color-secondary);
+            }
+
+            /* Privacy Section */
+            .privacy {
+                background-color: var(--color-cream);
+                padding: 80px 0;
+            }
+
+            .privacy .section-label {
+                margin-bottom: 8px;
+            }
+
+            .privacy h2 {
+                font-family: var(--font-heading);
+                font-size: 36px;
+                font-weight: 600;
+                color: var(--color-primary);
+                margin-bottom: 8px;
+            }
+
+            .privacy-date {
+                font-size: 14px;
+                color: var(--color-muted);
+                margin-bottom: 48px;
+            }
+
+            .privacy-grid {
+                display: grid;
+                grid-template-columns: 280px 1fr;
+                gap: 40px;
+            }
+
+            .privacy-nav {
+                position: sticky;
+                top: 100px;
+            }
+
+            .privacy-nav a {
+                display: block;
+                font-size: 14px;
+                font-weight: 500;
+                color: var(--color-muted);
+                padding: 10px 0;
+                border-bottom: 1px solid #ddd;
+                transition: color var(--transition);
+            }
+
+            .privacy-nav a:hover {
+                color: var(--color-accent);
+            }
+
+            .privacy-content h3 {
+                font-size: 16px;
+                font-weight: 500;
+                color: var(--color-primary);
+                margin-bottom: 12px;
+                margin-top: 32px;
+            }
+
+            .privacy-content h3:first-child {
+                margin-top: 0;
+            }
+
+            .privacy-content p {
+                font-size: 15px;
+                font-weight: 300;
+                color: var(--color-muted);
+                line-height: 1.7;
+                margin-bottom: 16px;
+            }
+
+            /* Footer */
+            .footer {
+                background-color: var(--color-primary);
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+                padding: 32px 0;
+            }
+
+            .footer .container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 24px;
+            }
+
+            .footer-logo {
+                font-family: var(--font-heading);
+                font-size: 18px;
+                font-weight: 600;
+                color: var(--color-white);
+            }
+
+            .footer-logo span {
+                color: var(--color-accent);
+            }
+
+            .footer-tagline {
+                font-size: 14px;
+                color: rgba(255, 255, 255, 0.6);
+            }
+
+            .footer-bottom {
+                display: flex;
+                align-items: center;
+                gap: 24px;
+            }
+
+            .footer-copyright {
+                font-size: 13px;
+                color: rgba(255, 255, 255, 0.5);
+            }
+
+            .footer-privacy {
+                font-size: 13px;
+                color: rgba(255, 255, 255, 0.6);
+                transition: color var(--transition);
+            }
+
+            .footer-privacy:hover {
+                color: var(--color-accent);
+            }
+
+            /* Responsive */
+            @media (max-width: 760px) {
+                .nav-links {
+                    display: none;
+                }
+
+                .hero .container {
+                    grid-template-columns: 1fr;
+                    gap: 40px;
+                }
+
+                .hero h1 {
+                    font-size: 36px;
+                }
+
+                .hero-visual {
+                    display: none;
+                }
+
+                .trust-bar .container {
+                    flex-direction: column;
+                    gap: 20px;
+                    align-items: flex-start;
+                }
+
+                .steps {
+                    grid-template-columns: 1fr;
+                }
+
+                .order-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .form-row {
+                    grid-template-columns: 1fr;
+                }
+
+                .privacy-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .privacy-nav {
+                    display: none;
+                }
+
+                .footer .container {
+                    flex-direction: column;
+                    text-align: center;
+                }
+
+                .footer-bottom {
+                    flex-direction: column;
+                    gap: 12px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav class="nav">
+            <div class="container">
+                <a href="#" class="nav-logo">Raaffby <span>Enterprise</span></a>
+                <ul class="nav-links">
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#how">How it works</a></li>
+                    <li><a href="#why">Why us</a></li>
+                    <li><a href="#order" class="nav-cta">Place an order</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <span class="hero-tag"
+                        >Wholesale & Bulk Supply · Accra, Ghana</span
+                    >
+                    <h1>
+                        Quality goods,
+                        <span class="accent">delivered reliably.</span>
+                    </h1>
+                    <p>
+                        We supply retailers across Greater Accra with premium
+                        beverages and snacks — from bottled water to plantain
+                        chips — at competitive wholesale rates.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#order" class="btn-primary">Place an order</a>
+                        <a href="#products" class="btn-secondary"
+                            >See our products</a
+                        >
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-card">
+                        <div class="hero-card-icon">💧</div>
+                        <div class="hero-card-label">Drinking Water</div>
+                    </div>
+                    <div class="hero-card">
+                        <div class="hero-card-icon">🥤</div>
+                        <div class="hero-card-label">Soft & Hard Drinks</div>
+                    </div>
+                    <div class="hero-card">
+                        <div class="hero-card-icon">🥜</div>
+                        <div class="hero-card-label">Snacks</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust Bar -->
+        <section class="trust-bar">
+            <div class="container">
+                <div class="trust-item">
+                    <span class="trust-dot"></span>
+                    <span>Serving retailers across Greater Accra</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-dot"></span>
+                    <span>Bulk and large-order friendly</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-dot"></span>
+                    <span>Consistent quality, reliable supply</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products" id="products">
+            <div class="container">
+                <span class="section-label">Our Products</span>
+                <h2>What we supply</h2>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-thumb water">💧</div>
+                        <div class="product-info">
+                            <h3 class="product-name">Drinking Water</h3>
+                            <p class="product-desc">
+                                Sachet and bottled water for retail and
+                                distribution.
+                            </p>
+                            <span class="product-badge">Beverages</span>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-thumb drinks">🥤</div>
+                        <div class="product-info">
+                            <h3 class="product-name">Drinks & Beverages</h3>
+                            <p class="product-desc">
+                                Popular drink brands in bulk quantities.
+                            </p>
+                            <span class="product-badge">Beverages</span>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-thumb chips">🍌</div>
+                        <div class="product-info">
+                            <h3 class="product-name">Plantain Chips</h3>
+                            <p class="product-desc">
+                                Crispy, delicious plantain chips for snacking.
+                            </p>
+                            <span class="product-badge">Snacks</span>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-thumb groundnuts">🥜</div>
+                        <div class="product-info">
+                            <h3 class="product-name">Groundnuts</h3>
+                            <p class="product-desc">
+                                Fresh roasted and raw groundnuts in bulk.
+                            </p>
+                            <span class="product-badge">Snacks</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works" id="how">
+            <div class="container">
+                <span class="section-label">How to Order</span>
+                <h2>Simple process, reliable delivery</h2>
+                <div class="steps">
+                    <div class="step">
+                        <span class="step-number">01</span>
+                        <h3>Tell us what you need</h3>
+                        <p>
+                            Send us your product list and quantities through our
+                            order form or give us a call.
+                        </p>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">02</span>
+                        <h3>We confirm & quote</h3>
+                        <p>
+                            We'll review your order, confirm availability, and
+                            send you a competitive quote.
+                        </p>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">03</span>
+                        <h3>Receive your goods</h3>
+                        <p>
+                            Once confirmed, we'll arrange delivery or pickup at
+                            your convenience.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Us Section -->
+        <section class="why-us" id="why">
+            <div class="container">
+                <span class="section-label">Why Choose Us</span>
+                <h2>Built for retailers</h2>
+                <p>
+                    We understand the needs of small and medium retailers in
+                    Accra. Here's why businesses trust us for their supply.
+                </p>
+                <div class="why-grid">
+                    <div class="why-card">
+                        <div class="why-icon">📦</div>
+                        <h3>Bulk-order ready</h3>
+                        <p>
+                            We handle orders of any size, from small retail
+                            restocks to full truckloads.
+                        </p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-icon">✅</div>
+                        <h3>Consistent quality</h3>
+                        <p>
+                            Every batch meets our standards — no compromised or
+                            expired goods.
+                        </p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-icon">🤝</div>
+                        <h3>Straightforward dealings</h3>
+                        <p>
+                            No hidden fees, no complications — clear pricing and
+                            honest service.
+                        </p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-icon">📍</div>
+                        <h3>Based in Accra</h3>
+                        <p>
+                            Local presence means faster deliveries and reliable
+                            support when you need it.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Order Section -->
+        <section class="order-section" id="order">
+            <div class="container">
+                <span class="section-label">Get in Touch</span>
+                <h2>Place an order</h2>
+                <p>
+                    Ready to stock up? Send us your enquiry and we'll get back
+                    to you within 24 hours.
+                </p>
+                <div class="order-grid">
+                    <div class="contact-info">
+                        <h3>Contact us</h3>
+                        <p>
+                            Prefer to reach out directly? Here's how you can
+                            contact us.
+                        </p>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="contact-icon">📞</div>
+                                <span class="contact-text"
+                                    >+233 24 927 0943</span
+                                >
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">✉️</div>
+                                <span class="contact-text"
+                                    >hello@raaffbyenterprise.com</span
+                                >
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">📍</div>
+                                <span class="contact-text">Accra, Ghana</span>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="order-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    placeholder="Your name"
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    placeholder="Your phone number"
+                                />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="business">Business Name</label>
+                            <input
+                                type="text"
+                                id="business"
+                                name="business"
+                                placeholder="Your business name"
+                            />
+                        </div>
+                        <div class="form-group">
+                            <label for="product">Product Interest</label>
+                            <select id="product" name="product">
+                                <option value="">Select a product</option>
+                                <option value="water">Drinking water</option>
+                                <option value="drinks">
+                                    Soft drinks & beverages
+                                </option>
+                                <option value="chips">Plantain chips</option>
+                                <option value="groundnuts">Groundnuts</option>
+                                <option value="multiple">
+                                    Multiple products
+                                </option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="details">Order Details</label>
+                            <textarea
+                                id="details"
+                                name="details"
+                                placeholder="Tell us about the quantities and any specific requirements..."
+                            ></textarea>
+                        </div>
+                        <button type="submit" class="form-submit">
+                            Send enquiry
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Privacy Section -->
+        <section class="privacy" id="privacy">
+            <div class="container">
+                <span class="section-label">Legal</span>
+                <h2>Privacy Policy</h2>
+                <p class="privacy-date">Last updated: April 2026</p>
+                <div class="privacy-grid">
+                    <nav class="privacy-nav">
+                        <a href="#privacy-intro">Introduction</a>
+                        <a href="#privacy-collect">Information we collect</a>
+                        <a href="#privacy-use">How we use your information</a>
+                        <a href="#privacy-storage">Data storage</a>
+                        <a href="#privacy-rights">Your rights</a>
+                        <a href="#privacy-cookies">Cookies</a>
+                        <a href="#privacy-contact">Contact</a>
+                    </nav>
+                    <div class="privacy-content">
+                        <h3 id="privacy-intro">Introduction</h3>
+                        <p>
+                            Raaffby Enterprise respects the privacy of every
+                            visitor to our website and every customer who
+                            contacts us. This policy explains how we handle your
+                            personal information.
+                        </p>
+
+                        <h3 id="privacy-collect">Information we collect</h3>
+                        <p>
+                            We collect only the information you provide to us
+                            through our enquiry form, which includes your name,
+                            phone number, business name, and order details.
+                        </p>
+
+                        <h3 id="privacy-use">How we use your information</h3>
+                        <p>
+                            We use your information to respond to your
+                            enquiries, process your orders, and communicate with
+                            you about your purchase. We do not sell or share
+                            your personal data with any third parties.
+                        </p>
+
+                        <h3 id="privacy-storage">Data storage</h3>
+                        <p>
+                            Your information is kept securely and only for as
+                            long as necessary to fulfil your order or respond to
+                            your enquiry. We take reasonable steps to protect
+                            your data from unauthorized access.
+                        </p>
+
+                        <h3 id="privacy-rights">Your rights</h3>
+                        <p>
+                            You may contact us at any time to request access to,
+                            correction of, or deletion of your personal data. We
+                            will respond to your request within a reasonable
+                            timeframe.
+                        </p>
+
+                        <h3 id="privacy-cookies">Cookies</h3>
+                        <p>
+                            This website does not use tracking cookies or
+                            analytics tools. You can browse our site without any
+                            data being collected about your visit.
+                        </p>
+
+                        <h3 id="privacy-contact">Contact</h3>
+                        <p>
+                            For any privacy-related questions or requests,
+                            please contact us at hello@raaffbyenterprise.com.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-logo">Raaffby <span>Enterprise</span></div>
+                <div class="footer-tagline">
+                    Beverages · Water · Snacks · Accra, Ghana
+                </div>
+                <div class="footer-bottom">
+                    <span class="footer-copyright"
+                        >© 2026 Raaffby Enterprise. All rights reserved.</span
+                    >
+                    <a href="#privacy" class="footer-privacy">Privacy Policy</a>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
